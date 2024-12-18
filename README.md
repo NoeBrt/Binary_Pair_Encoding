@@ -1,6 +1,6 @@
-# Corpus Vocabulary Trainer and Segmenter : Binary Pair Encoding
+# Corpus Vocabulary Trainer and Segmenter : Binray Pair Encoding
 
-A Python CLI tool to train a vocabulary model and segment text based on learned patterns.
+A Python CLI tool to train a vocabulary model and segment text based on learned patterns using Byte Pair Encoding (BPE).
 
 ## Features
 
@@ -29,10 +29,10 @@ To train the model, provide the input text directly or as a path to a `.txt` fil
 
 ```bash
 # Direct text
-python cli_segment.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --iterations 10
+python bpe.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --iterations 10
 
 # Text from a .txt file
-python cli_segment.py "path/to/your/file.txt" --iterations 10
+python bpe.py "path/to/your/file.txt" --iterations 10
 ```
 
 The vocabulary will be displayed after training.
@@ -43,10 +43,10 @@ To segment a new text after training, provide the text directly or as a path to 
 
 ```bash
 # Direct text
-python cli_segment.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --segment "the new low is newer but lowest"
+python bpe.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --segment "the new low is newer but lowest"
 
 # Text from a .txt file
-python cli_segment.py "path/to/your/file.txt" --segment "path/to/your/segment_file.txt"
+python bpe.py "path/to/your/file.txt" --segment "path/to/your/segment_file.txt"
 ```
 
 ### Example Output
@@ -77,4 +77,4 @@ Segmented Text:
 This project is licensed under the MIT License.
 ```
 
-This version of the README explains how to use both direct text input and `.txt` files for training and segmenting. It covers installation, usage, arguments, and provides example outputs for both tasks.
+This version reflects the correct script name (`bpe.py`) and describes how to use it for both training and segmenting text with the option to input direct text or `.txt` files.
