@@ -1,2 +1,80 @@
-# Binary_Pair_Encoding
-A Custom Implementation of BPE From Scratch using Numpy
+# Corpus Vocabulary Trainer and Segmenter : Binary Pair Encoding
+
+A Python CLI tool to train a vocabulary model and segment text based on learned patterns.
+
+## Features
+
+- Trains a vocabulary model using a corpus.
+- Segments new text using the trained vocabulary.
+- Configurable number of training iterations.
+- Supports input from both direct text and `.txt` files.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo-name/vocabulary-trainer.git
+   cd vocabulary-trainer
+   ```
+2. Install required dependencies:
+   ```bash
+   pip install numpy tqdm
+   ```
+
+## Usage
+
+### Training the Model
+
+To train the model, provide the input text directly or as a path to a `.txt` file:
+
+```bash
+# Direct text
+python cli_segment.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --iterations 10
+
+# Text from a .txt file
+python cli_segment.py "path/to/your/file.txt" --iterations 10
+```
+
+The vocabulary will be displayed after training.
+
+### Segmenting Text
+
+To segment a new text after training, provide the text directly or as a path to a `.txt` file:
+
+```bash
+# Direct text
+python cli_segment.py "low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new" --segment "the new low is newer but lowest"
+
+# Text from a .txt file
+python cli_segment.py "path/to/your/file.txt" --segment "path/to/your/segment_file.txt"
+```
+
+### Example Output
+
+#### Training
+```plaintext
+------------ Start Training -----------
+Training: 100%|████████████████████████| 10/10 [00:00<00:00, 100.00it/s]
+------------ End of Training -----------
+Vocabulary:
+['_' 'l' 'o' 'w' ... 'lo' 'ow' 'we']
+```
+
+#### Segmenting
+```plaintext
+Segmented Text:
+[['th', 'e'], ['new'], ['lo', 'w'], ['is'], ['new', 'er'], ['but'], ['lo', 'we', 'st']]
+```
+
+## Arguments
+
+- `text`: The input text for training, or the path to a `.txt` file.
+- `--segment`: Text to segment using the trained vocabulary, or the path to a `.txt` file containing the text to segment.
+- `--iterations`: (Optional) Number of training iterations. Default is 10.
+
+## License
+
+This project is licensed under the MIT License.
+```
+
+This version of the README explains how to use both direct text input and `.txt` files for training and segmenting. It covers installation, usage, arguments, and provides example outputs for both tasks.
