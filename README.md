@@ -1,4 +1,5 @@
-# Binary Pair Encoding : Corpus Vocabulary Trainer and Segmenter
+# Binary Pair Encoding  
+Corpus Vocabulary Trainer and Segmenter
 
 A Python CLI tool to train a vocabulary model and segment text based on learned patterns using Byte Pair Encoding (BPE).
 
